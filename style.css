@@ -1,0 +1,114 @@
+/* header */
+header .navbar-nav .nav-item::after{
+    content: '';
+    width: 0;
+    height: 2px ;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: green;
+    transition: all 0.2s;
+}
+
+header .navbar-nav .nav-item:hover::after{
+    width: 100%;
+}
+header .navbar-nav .nav-item:hover .nav-link{
+    color: green !important;
+}
+
+header .navbar-nav li.active::after{
+    width: 100%;
+}
+header .navbar-nav li.active a{
+    color: green !important;
+}
+header{
+    z-index: 99999;
+}
+
+/* cyber_carousel */
+.cyber-carousel .carousel-inner{
+    height: 100vh;
+}
+.cyber-carousel .carousel-inner img{
+    object-fit: cover;
+}
+
+/* canh giữa khi cần tạo overlay */
+.cyber-carousel .carousel-inner .carousel-item .carousel-content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+    
+}
+ .cyber-carousel .carousel-indicators button{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+ }
+ .cyber-carousel .carousel-indicators .active{
+    background-color: green;
+ }
+
+
+ /* PROJECT */
+ .cyber-project .nav-pills .nav-link.active{
+    background-color: green;
+    color: white !important;
+ }
+ 
+ .cyber-project .project-content .card-body:hover{
+    border: 2px solid green;
+    transition: all 0.2s;
+    border-radius:0 0  0.375rem 0.375rem;
+ }
+ .cyber-project .project-content .card-body:hover h5{
+    color: green;
+ }
+
+ /* AVAILABLE */
+.cyber_avai{
+    background-image: url(./../img/3.jpg);
+    position: relative;
+}
+.cyber_avai .overlay {
+    position: absolute;
+    background-color: rgba(7, 10, 12, 0.72);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.cyber_avai .avai_item{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(3px);
+    transition: all 0.5s;
+    border: 1px solid transparent;
+}
+.cyber_avai .avai_item:hover{
+    border-color: white;
+    background-color: black;
+}
+/* sau này khi đi làm để hết @keyframes @media thường để cuối file css */
+/* lưu ý khi sử dụng max-width: những giá trị nhỏ hơn nằm ở dưới và những giá trị lớn hơn nằm ở trên */
+@media screen and (max-width: 992px){
+    .cyber-carousel .carousel-content h2{
+        color: red;
+    }
+}
+@media screen and (max-width: 576px){
+    .cyber-carousel .carousel-content h2{
+        color: green;
+    }
+}
+@media screen and (min-width: 576px){
+    .cyber-carousel .carousel-content h2{
+        font-size: 30px;
+        color: yellow;
+    }
+}
